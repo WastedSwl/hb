@@ -1,0 +1,104 @@
+.blogContainer {
+    font-family: 'Arial, sans-serif';
+    background-color: #23272A; /* Цвет фона */
+    color: #FFFFFF; /* Цвет текста */
+    margin: 0;
+    padding: 2rem; /* Внутренние отступы */
+    min-height: 100vh; /* Минимальная высота */
+    position: relative;
+    overflow: hidden; /* Скрыть лишние элементы */
+    z-index: 1; /* Убедитесь, что это выше, чем у частиц */
+}
+
+.particleBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Позволяет частицам быть на фоне */
+}
+
+.blogTitle {
+    text-align: center;
+    font-size: 3rem; /* Размер шрифта заголовка блога */
+    color: #7289DA; /* Цвет заголовка */
+    margin-bottom: 2rem; /* Отступ снизу */
+}
+
+.updatesContainer,
+.tasksContainer {
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для контейнеров */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 1rem; /* Внутренние отступы */
+    margin-bottom: 2rem; /* Отступ снизу */
+}
+
+.updatesTitle,
+.tasksTitle {
+    font-size: 1.5rem; /* Размер шрифта заголовков секций */
+    color: #7289DA; /* Цвет заголовков секций */
+    margin-bottom: 1rem; /* Отступ снизу */
+}
+
+.updatesList,
+.tasksList {
+    list-style: none; /* Убираем маркеры */
+    padding: 0; /* Убираем отступы */
+}
+
+.updateItem,
+.taskItem {
+    color: #E0E0E0; /* Цвет текста для элементов списка */
+    margin: 0.5rem 0; /* Отступы для элементов списка */
+}
+
+.faqContainer {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #4F5B93;
+    border-radius: 5px;
+    background-color: #2C2F33; /* Цвет фона для FAQ */
+  }
+  
+  .faqTitle {
+    color: #7289DA;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .faqList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .faqItem {
+    margin-bottom: 1rem;
+  }
+  
+  .faqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: #23272A; /* Цвет фона для вопроса */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .faqQuestion:hover {
+    background-color: #3C4042; /* Цвет фона при наведении */
+  }
+  
+  .faqAnswer {
+    padding: 0.5rem;
+    color: #E0E0E0; /* Цвет текста для ответа */
+  }
+  
+  .iconOpen, .iconClosed {
+    margin-left: 1rem;
+    font-weight: bold;
+    color: #7289DA; /* Цвет иконок */
+  }
+  
