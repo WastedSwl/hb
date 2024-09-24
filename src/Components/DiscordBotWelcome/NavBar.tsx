@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './DiscordBotWelcome.module.css';
+import React from "react";
+import styles from "./DiscordBotWelcome.module.css";
 import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
@@ -7,13 +7,19 @@ const Navbar: React.FC = () => {
     <nav className={styles.navbar}>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <Link to="/" className={styles.navLink}>Home</Link>
+          <Link to="/" className={styles.navLink}>
+            Home
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="#features" className={styles.navLink}>Функции</Link>
+          <Link to="/game" className={styles.navLink}>
+            Игра
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/blog" className={styles.navLink}>Blog</Link>
+          <Link to="/blog" className={styles.navLink}>
+            Blog
+          </Link>
         </li>
       </ul>
     </nav>
