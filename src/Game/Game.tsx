@@ -1,18 +1,22 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import * as PIXI from "pixi.js";
 import styles from "./Game.module.css";
 
 const Game: React.FC = () => {
   const appRef = useRef<PIXI.Application | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const isInitializedRef = useRef(false);
+  const [contextMenu, setContextMenu] = useState<{
+    x: number;
+    y: number;
+    tileX: number;
+    tileY: number;
+  } | null>(null);
+  const [contextMenuTimer, setContextMenuTimer] =
+    useState<NodeJS.Timeout | null>(null); // Для хранения таймера
 
-  // Функция для инициализации приложения PIXI
   const initializePixiApp = async () => {
     if (!containerRef.current || appRef.current) return;
-    if (containerRef.current.children.length > 0) return;
 
-    // Создание приложения PIXI
     const app = new PIXI.Application();
     await app.init({
       width: window.innerWidth,
@@ -21,11 +25,9 @@ const Game: React.FC = () => {
       resolution: window.devicePixelRatio || 1,
     });
 
-    // Добавляем canvas в DOM
     containerRef.current.appendChild(app.canvas);
     appRef.current = app;
-    console.log("хуй");
-    // Инициализируем игровое поле
+
     const tileTexture = await PIXI.Assets.load("/sprites/tile.png");
     const tileContainer = new PIXI.Container();
     app.stage.addChild(tileContainer);
@@ -37,11 +39,49 @@ const Game: React.FC = () => {
         tile.width = tileSize;
         tile.height = tileSize;
         tile.position.set(i * tileSize, j * tileSize);
+        tile.eventMode = "static";
+        tile.cursor = "pointer";
+
+        // Добавляем обработку наведения на клетку
+        tile.on("pointerover", () => {
+          tile.alpha = 0.8; // Уменьшение прозрачности при наведении
+
+          // Очищаем предыдущий таймер, если есть
+          if (contextMenuTimer) {
+            clearTimeout(contextMenuTimer);
+            setContextMenuTimer(null);
+          }
+
+          // Задаём таймер для показа контекстного меню с задержкой
+          const timer = setTimeout(() => {
+            const tilePos = tile.getGlobalPosition();
+            setContextMenu({
+              x: tilePos.x + tileSize,
+              y: tilePos.y + tileSize,
+              tileX: i,
+              tileY: j,
+            });
+          }, 500); // Задержка в 500 мс
+
+          setContextMenuTimer(timer);
+        });
+
+        tile.on("pointerout", () => {
+          tile.alpha = 1; // Восстановление прозрачности
+
+          // Если курсор уходит с клетки, очищаем таймер и скрываем меню
+          if (contextMenuTimer) {
+            clearTimeout(contextMenuTimer);
+            setContextMenuTimer(null);
+          }
+          setContextMenu(null);
+        });
+
         tileContainer.addChild(tile);
       }
     }
 
-    // Возможность перемещения игрового поля
+    // Перемещение игрового поля
     let dragging = false;
     let startX = 0;
     let startY = 0;
@@ -81,11 +121,30 @@ const Game: React.FC = () => {
       if (containerRef.current) {
         containerRef.current.innerHTML = "";
       }
-      isInitializedRef.current = false;
-    };
-  }, [initializePixiApp]);
 
-  return <div ref={containerRef} className={styles.gameContainer} />;
+      // Очищаем таймер при размонтировании компонента
+      if (contextMenuTimer) {
+        clearTimeout(contextMenuTimer);
+      }
+    };
+  }, []);
+
+  return (
+    <div ref={containerRef} className={styles.gameContainer}>
+      {contextMenu && (
+        <div
+          className={styles.contextMenu}
+          style={{
+            top: `${contextMenu.y}px`,
+            left: `${contextMenu.x}px`,
+          }}
+        >
+          X = {contextMenu.tileX}
+          {"\n"}Y = {contextMenu.tileY}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Game;

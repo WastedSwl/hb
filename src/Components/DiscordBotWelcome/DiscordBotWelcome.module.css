@@ -1,412 +1,422 @@
 /* ТЕКСТ */
 .commandTitle {
-    background: linear-gradient(90deg, #7289DA, #4F5B93);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .commandDescription {
-    color: #FFFFFF; /* Белый текст для описания */
-  }
-  
-  .commandDetail {
-    color: #FFFFFF; /* Белый текст для деталей команды */
-  }
-  
-  .commandName {
-    color: #7289DA; /* Синий цвет для названий команд */
-    font-weight: bold; /* Полужирный шрифт для выделения */
-  }
-  
-  .commandDesc {
-    color: #FFFFFF; /* Белый цвет для описания команд */
-  }
+  background: linear-gradient(90deg, #7289da, #4f5b93);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+.commandDescription {
+  color: #ffffff; /* Белый текст для описания */
+}
+
+.commandDetail {
+  color: #ffffff; /* Белый текст для деталей команды */
+}
+
+.commandName {
+  color: #7289da; /* Синий цвет для названий команд */
+  font-weight: bold; /* Полужирный шрифт для выделения */
+}
+
+.commandDesc {
+  color: #ffffff; /* Белый цвет для описания команд */
+}
 
 .container {
-    font-family: 'Arial, sans-serif';
-    background-color: #23272A;
-    color: #FFFFFF;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* ХЕДЕР */
-  .header {
-    text-align: center;
-    margin: 50px 0; /* Отступы сверху и снизу */
-    padding: 20px; /* Внутренние отступы */
-    border-radius: 1px; /* Закругленные углы */
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.026);  */
-  }
-  
-  .headerTitle {
-    color: #7289DA; /* Синий цвет для названий команд */
-    font-weight: bold; /* Полужирный шрифт для выделения */
-    font-size: 4.5rem; /* Увеличенный размер шрифта */
-    margin: 0; /* Убираем отступы */
-  }
-  
-  .headerDescription {
-    color: #E0E0E0; /* Светло-серый цвет для описания */
-    font-size: 1.6rem; /* Размер шрифта для описания */
-    margin-top: 10px; /* Отступ сверху для описания */
-    line-height: 1.5; /* Межстрочный интервал для удобства чтения */
-  }
-  .particleBackground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Позволяем частицам быть на фоне */
-  }
-  
-  .commandItem {
-    background-color: #2C2F33;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
-  }
-  
-  .commandDetails {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .commandDetail {
-    background-color: #2C2F33;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    color: #FFFFFF;
-    font-size: 1.1rem;
-  }
-  
-  .statisticsContainer {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 3rem;
-  }
-  
-  .statisticsContainer {
-    display: flex;
-    justify-content: center; /* Центрируем элементы по горизонтали */
-    flex-wrap: wrap; /* Позволяем элементам переходить на новую строку */
-    margin-top: 3rem;
-    gap: 1rem; /* Отступ между элементами */
-  }
-  
-  .statistic {
-    background-color: #2C2F33;
-    border-radius: 100%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 170px;
-    text-align: center;
-    flex: 1 1 150px; /* Позволяет элементам расти и сжиматься */
-    max-width: 200px; /* Ограничиваем максимальную ширину */
-  }
-  
-  .statTitle {
-    color: #7289DA; /* Синий цвет для названий */
-    font-size: 2rem; /* Большой размер шрифта для названий */
-    margin: 0; /* Убираем отступы */
-  }
-  
-  .statLabel {
-    color: #FFFFFF; /* Белый цвет для описаний */
-    font-size: 1.2rem; /* Размер шрифта для описаний */
-    margin-top: 10px; /* Отступ сверху для описания */
-    margin-bottom: 20px;
-  }
-  
-  .addButton {
-    display: block;
-    width: 200px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: #7289DA;
-    color: #FFFFFF;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-bottom: 3rem;
-  }
-  
-  .beerIcon {
-    position: absolute;
-    font-size: 2rem;
-  }
+  font-family: "Arial, sans-serif";
+  background-color: #23272a;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ХЕДЕР */
+.header {
+  text-align: center;
+  margin: 50px 0; /* Отступы сверху и снизу */
+  padding: 20px; /* Внутренние отступы */
+  border-radius: 1px; /* Закругленные углы */
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.026);  */
+}
+
+.headerTitle {
+  color: #7289da; /* Синий цвет для названий команд */
+  font-weight: bold; /* Полужирный шрифт для выделения */
+  font-size: 4.5rem; /* Увеличенный размер шрифта */
+  margin: 0; /* Убираем отступы */
+}
+
+.headerDescription {
+  color: #e0e0e0; /* Светло-серый цвет для описания */
+  font-size: 1.6rem; /* Размер шрифта для описания */
+  margin-top: 10px; /* Отступ сверху для описания */
+  line-height: 1.5; /* Межстрочный интервал для удобства чтения */
+}
+.particleBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Позволяем частицам быть на фоне */
+}
+
+.commandItem {
+  background-color: #2c2f33;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.commandDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.commandDetail {
+  background-color: #2c2f33;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.statisticsContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.statisticsContainer {
+  display: flex;
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  flex-wrap: wrap; /* Позволяем элементам переходить на новую строку */
+  margin-top: 3rem;
+  gap: 1rem; /* Отступ между элементами */
+}
+
+.statistic {
+  background-color: #2c2f33;
+  border-radius: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 170px;
+  text-align: center;
+  flex: 1 1 150px; /* Позволяет элементам расти и сжиматься */
+  max-width: 200px; /* Ограничиваем максимальную ширину */
+}
+
+.statTitle {
+  color: #7289da; /* Синий цвет для названий */
+  font-size: 2rem; /* Большой размер шрифта для названий */
+  margin: 0; /* Убираем отступы */
+}
+
+.statLabel {
+  color: #ffffff; /* Белый цвет для описаний */
+  font-size: 1.2rem; /* Размер шрифта для описаний */
+  margin-top: 10px; /* Отступ сверху для описания */
+  margin-bottom: 20px;
+}
+
+.addButton {
+  display: block;
+  width: 200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #7289da;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.beerIcon {
+  position: absolute;
+  font-size: 2rem;
+}
 
 /* ABOUT */
 
 .aboutContainer {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
-  }
-  
-  .aboutTitle {
-    color: #7289DA; /* Синий цвет для заголовка */
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .featuresContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-  
-  .featureCard {
-    background-color: #2C2F33;
-    border-radius: 10px;
-    padding: 1.5rem;
-    width: 200px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-  }
-  
-  .featureCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .featureTitle {
-    color: #7289DA; /* Синий цвет для заголовков функций */
-    margin: 0 0 10px;
-    font-size: 1.5rem;
-  }
-  
-  .featureDescription {
-    color: #FFFFFF; /* Белый цвет для описаний */
-    font-size: 1rem;
-  }
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
 
-  .gameContainer {
-    display: flex;
-    align-items: center;
-    margin-top: 3rem;
-  }
-  
-  .gameText {
-    flex: 1;
-    padding-right: 2rem; /* Отступ справа для текста */
-  }
-  
-  .gameTitle {
-    color: #7289DA; /* Синий цвет для заголовка */
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .gameDescription {
-    color: #FFFFFF; /* Белый цвет для описания */
-    font-size: 1.2rem;
-    line-height: 1.5; /* Междустрочный интервал */
-  }
-  
-  .gameImageContainer {
-    flex: 1;
-    perspective: 1000px; /* Для эффекта 3D */
-  }
-  
-  .gameImage {
-    width: 100%;
-    height: auto;
-    border-radius: 15px; /* Закругленные углы */
-    transform: translateZ(30px) rotateY(-190deg); /* Эффект при наведении */
-    transition: transform 0.3s;
-  }
-  
-  /* TEAM */
+.aboutTitle {
+  color: #7289da; /* Синий цвет для заголовка */
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
 
-  .teamContainer {
-    margin-top: 4rem;
-    text-align: center;
-  }
-  
-  .teamTitle {
-    color: #7289DA;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .teamCards {
-    display: flex;
-    justify-content: center;
-    gap: 2rem; /* Расстояние между карточками */
-  }
-  
-  .teamCard {
-    background-color: #2C2F33; /* Цвет фона карточки */
-    border-radius: 10px;
-    padding: 1.5rem;
-    width: 250px; /* Ширина карточки */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-  }
-  
-  .teamCard:hover {
-    transform: scale(1.05); /* Эффект увеличения при наведении */
-  }
-  
-  .teamImage {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-  }
-  
-  .teamName {
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .teamRole {
-    color: #99AAB5; /* Цвет для роли */
-    margin-bottom: 1rem;
-  }
-  
-  .socialLinks {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .socialLink {
-    color: #7289DA;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  
-  .socialLink:hover {
-    color: #99AAB5; /* Цвет при наведении */
-  }
-  .languageContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem; /* Отступ между ячейками */
-    margin-top: 0.5rem; /* Отступ сверху */
-  }
-  
-  .languageBadge {
-    background-color: #7289DA; /* Цвет фона для ячеек */
-    color: #FFFFFF; /* Цвет текста */
-    padding: 0.5rem 0.75rem; /* Внутренние отступы */
-    border-radius: 5px; /* Закругленные углы */
-    font-size: 0.9rem; /* Размер шрифта */
-  }
+.featuresContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
 
-  /* Blog */
+.featureCard {
+  background-color: #2c2f33;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
 
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-  .blogContainer {
-    margin: 3rem 0;
-    text-align: center;
-  }
-  
-  .blogTitle {
-    color: #7289DA; /* Синий цвет для заголовка */
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .updatesContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .updateCard {
-    background-color: #2C2F33;
-    border-radius: 10px;
-    padding: 1rem;
-    width: 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .updateCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .updateDate {
-    color: #99AAB5; /* Серый цвет для даты */
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .updateFeature {
-    color: #FFFFFF; /* Белый цвет для описания */
-    font-size: 1rem;
-  }
+.featureTitle {
+  color: #7289da; /* Синий цвет для заголовков функций */
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
 
-  /*NAV */
+.featureDescription {
+  color: #ffffff; /* Белый цвет для описаний */
+  font-size: 1rem;
+}
 
-  .navbar {
-    background-color: #23272A; /* Темный фон для навбара */
-    padding: 1rem 2rem;
-  }
-  
-  .navList {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navItem {
-    position: relative;
-    margin-right: 2rem; /* Отступ между элементами */
-  }
-  
-  .navLink {
-    color: #FFFFFF; /* Белый цвет текста */
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
-    transition: color 0.3s;
-  }
-  
-  .navLink:hover {
-    color: #FFD700; /* Желтый цвет при наведении */
-  }
-  
-  .navLink::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px; /* Расположение полоски ниже текста */
-    height: 3px;
-    width: 100%;
-    background-color: #FFD700; /* Желтая полоска */
-    transform: scaleX(0); /* Начальное состояние: скрыто */
-    transition: transform 0.3s ease; /* Плавный переход */
-  }
-  
-  .navLink:hover::after {
-    transform: scaleX(1); /* Показать полоску при наведении */
-  }
+.gameContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
 
+.gameText {
+  flex: 1;
+  padding-right: 2rem; /* Отступ справа для текста */
+}
+
+.gameTitle {
+  color: #7289da; /* Синий цвет для заголовка */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.gameDescription {
+  color: #ffffff; /* Белый цвет для описания */
+  font-size: 1.2rem;
+  line-height: 1.5; /* Междустрочный интервал */
+}
+
+.gameImageContainer {
+  flex: 1;
+  perspective: 1000px; /* Для эффекта 3D */
+}
+
+.gameImage {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* Закругленные углы */
+  transform: translateZ(30px) rotateY(-190deg); /* Эффект при наведении */
+  transition: transform 0.3s;
+}
+
+/* TEAM */
+
+.teamContainer {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.teamTitle {
+  color: #7289da;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.teamCards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Расстояние между карточками */
+}
+
+.teamCard {
+  background-color: #2c2f33; /* Цвет фона карточки */
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 250px; /* Ширина карточки */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.teamCard:hover {
+  transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+
+.teamImage {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.teamName {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.teamRole {
+  color: #99aab5; /* Цвет для роли */
+  margin-bottom: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialLink {
+  color: #7289da;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: #99aab5; /* Цвет при наведении */
+}
+.languageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Отступ между ячейками */
+  margin-top: 0.5rem; /* Отступ сверху */
+}
+
+.languageBadge {
+  background-color: #7289da; /* Цвет фона для ячеек */
+  color: #ffffff; /* Цвет текста */
+  padding: 0.5rem 0.75rem; /* Внутренние отступы */
+  border-radius: 5px; /* Закругленные углы */
+  font-size: 0.9rem; /* Размер шрифта */
+}
+
+/* Blog */
+
+.blogContainer {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.blogTitle {
+  color: #7289da; /* Синий цвет для заголовка */
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.updatesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.updateCard {
+  background-color: #2c2f33;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.updateCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.updateDate {
+  color: #99aab5; /* Серый цвет для даты */
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.updateFeature {
+  color: #ffffff; /* Белый цвет для описания */
+  font-size: 1rem;
+}
+
+/*NAV */
+
+:root {
+  --navbar-height: 60px; /* Примерная высота навбара, настройте под свои нужды */
+}
+
+/* Стили для навбара */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #23272a;
+  padding: 0 2rem;
+  height: var(--navbar-height);
+  z-index: 1000;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  align-items: center;
+}
+
+.navItem {
+  position: relative;
+  margin-right: 2rem;
+}
+
+.navLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #ffd700;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  width: 100%;
+  background-color: #ffd700;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
